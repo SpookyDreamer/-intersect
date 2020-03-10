@@ -22,8 +22,8 @@ int main(int argc, char* argv[])
 	}
 
 	unsigned int count;
-	//input >> count;
-	std::cin >> count;
+	input >> count;
+	//std::cin >> count;
 	std::vector<Line*> lines;
 	std::vector<Point*> intersects;
 	unsigned int i;
@@ -31,8 +31,8 @@ int main(int argc, char* argv[])
 	{
 		char type;
 		double x1, y1, x2, y2;
-		//input >> type >> x1 >> y1 >> x2 >> y2;
-		std::cin >> type >> x1 >> y1 >> x2 >> y2;
+		input >> type >> x1 >> y1 >> x2 >> y2;
+		//std::cin >> type >> x1 >> y1 >> x2 >> y2;
 		Point *point1 = new Point(x1, y1);
 		Point *point2 = new Point(x2, y2);
 		Line *line = new Line(point1, point2);
@@ -64,6 +64,6 @@ int main(int argc, char* argv[])
 	}
 	
 	std::wcout << intersects.size()  << std::endl;
-	//output << intersects.size() - same;
+	output << intersects.size() - same;
 	return 0;
 }
