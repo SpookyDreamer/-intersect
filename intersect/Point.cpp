@@ -1,4 +1,5 @@
 #include "Point.h"
+#include <math.h>
 
 Point::Point(double xAxis, double yAxis)
 {
@@ -18,5 +19,5 @@ double Point::getY()
 
 bool Point::equals(Point *point)
 {
-	return x == point->x && y == point->y;
+	return fabs(x - point->x) < 1e-10 && fabs(y - point->y) < 1e-10;
 }
