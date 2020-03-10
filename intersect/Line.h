@@ -1,7 +1,5 @@
 #pragma once
-
-//JAVA TO C++ CONVERTER NOTE: Forward class declarations:
-class Point;
+#include "Point.h"
 
 class Line
 {

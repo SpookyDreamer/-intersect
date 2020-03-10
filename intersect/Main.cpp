@@ -9,9 +9,9 @@ int main()
 {
 	unsigned int count;
 	std::cin >> count;
-	unsigned int i;
 	std::vector<Line*> lines;
 	std::vector<Point*> intersects;
+	unsigned int i;
 	for (i = 0; i < count; i++)
 	{
 		char type;
