@@ -1,16 +1,15 @@
-#pragma once
+﻿#pragma once
 
-#include <string>
 #include <vector>
 #include <iostream>
 #include "Line.h"
 #include "Point.h"
 
-void main()
+int main()
 {
-	int count;
+	unsigned int count;
 	std::cin >> count;
-	int i;
+	unsigned int i;
 	std::vector<Line*> lines;
 	std::vector<Point*> intersects;
 	for (i = 0; i < count; i++)
@@ -22,7 +21,7 @@ void main()
 		Point *point1 = new Point(x1, y1);
 		Point *point2 = new Point(x2, y2);
 		Line *line = new Line(point1, point2);
-		int j;
+		unsigned int j;
 		for (j = 0; j < lines.size(); j++)
 		{
 			if (line->isParallel(lines[j]))
@@ -30,7 +29,7 @@ void main()
 				continue;
 			}
 			Point *p = line->intersect(lines[j]);
-			int k;
+			unsigned int k;
 			bool flag = false;
 			for (k = 0; k < intersects.size(); k++)
 			{
@@ -48,4 +47,5 @@ void main()
 		lines.push_back(line);
 	}
 	std::wcout << intersects.size() << std::endl;
+	return 0;
 }
